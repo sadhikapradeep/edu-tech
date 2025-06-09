@@ -31,6 +31,7 @@
         justify-content: space-around;
         position: relative;
         top: 20px;
+
     }
 
     .imageabout {
@@ -56,7 +57,7 @@
 
     .footer {
         position: relative;
-        top: 30px;
+        top: 70px;
         background-color: rgb(6, 6, 100);
         border: 1px solid black;
         height: 150px;
@@ -67,8 +68,111 @@
     i {
         color: white;
     }
-    form{
-        border: 2px solid  black;
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .contact {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .contactus {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    label {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+
+    textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        resize: vertical;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .btns {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #1e90ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btns:hover {
+        background-color: #0073e6;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+
+
+    @media (max-width: 768px) {
+        .contact {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form,
+        img {
+            max-width: 100%;
+        }
+        h2{
+            position: relative;
+            top: 40px;
+        }
+        .cards{
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 25px;
+
+        }
+
+        .about {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .imageabout {
+            width: 90%;
+            height: auto;
+        }
+
+        .vision,
+        .mission {
+            margin-top: 20px;
+            padding: 0 15px;
+        }
     }
 </style>
 
@@ -177,13 +281,27 @@
             </div>
         </div>
     </div>
-    <!-- contact us
-     <div class="contact">
-        <form action="">
-            <label for="">Name</label>
+    <!-- contact us -->
+    <h2>CONTACT US</h2>
+    <div class="contact">
+        <form class="contactus" action="submit">
+            <label for="name">Name</label>
             <input type="text" id="name" name="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button class="btns" type="submit">Send</button>
         </form>
-     </div> -->
+
+        <div>
+            <img src="IMAGES/contact.jpg" alt="Contact" height="500px" width="500px">
+        </div>
+    </div>
+
     <!-- footer -->
     <div class="footer">
         <p>sample@gmail.com :&nbsp; phno:9933445566</p>
