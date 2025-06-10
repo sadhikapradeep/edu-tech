@@ -22,7 +22,7 @@
             display: flex;
             justify-content: center;
             position: relative;
-            top: 15px;
+            padding: 10px;
         }
 
         .cards {
@@ -48,15 +48,10 @@
             display: flex;
             gap: 20px;
             position: relative;
-            top: 25px;
-            flex-wrap: wrap;
+            bottom: 20px;
             justify-content: center;
         }
 
-        .aboutuss {
-            position: relative;
-            top: 20px;
-        }
 
         h3 {
             display: flex;
@@ -86,13 +81,14 @@
 
         .contact {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
             padding: 30px;
             gap: 30px;
             max-width: 1000px;
             margin: auto;
+            position: relative;
+            top: 30px;
         }
 
         .contactus {
@@ -134,8 +130,6 @@
 
         img {
             max-width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
 
         .contactusimage {
@@ -170,10 +164,55 @@
 
             .contact {
                 padding: 15px;
+                flex-direction: column;
             }
 
             .footer {
                 font-size: 14px;
+            }
+        }
+
+        .vision,
+        .mission {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .vision,
+        .mission {
+            font-size: 24px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .vision p,
+        .mission p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+
+            .vision,
+            .mission {
+                width: 90%;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .vision h3,
+            .mission h3 {
+                font-size: 20px;
+            }
+
+            .vision p,
+            .mission p {
+                font-size: 15px;
             }
         }
     </style>
@@ -221,13 +260,16 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="IMAGES/edutechimage1.webp" class="d-block w-100" alt="..." style="max-height: 60vh; object-fit: cover;">
+                <img src="IMAGES/edutechimage1.webp" class="d-block w-100 " alt="..."
+                    style="max-height: 90vh; object-fit: cover;">
             </div>
             <div class="carousel-item">
-                <img src="IMAGES/edutechimage4.jpeg" class="d-block w-100" alt="..." style="max-height: 60vh; object-fit: cover;">
+                <img src="IMAGES/edutechimage4.jpeg" class="d-block w-100" alt="..."
+                    style="max-height: 90vh; object-fit: cover;">
             </div>
             <div class="carousel-item">
-                <img src="IMAGES/edutechimage3.png" class="d-block w-100" alt="..." style="max-height: 60vh; object-fit: cover;">
+                <img src="IMAGES/edutechimage3.png" class="d-block w-100" alt="..."
+                    style="max-height: 90vh; object-fit: cover;">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -245,42 +287,57 @@
     <!-- Services -->
     <h2>OUR SERVICES</h2>
     <div class="cards">
-        <div class="card">
-            <img src="IMAGES/python.jpg" class="card-img-top" alt="Python">
+        <div class="card" style="width: 18rem;">
+            <img src="IMAGES/python.jpg" class="card-img-top" alt="image" height="300px">
             <div class="card-body">
                 <p class="card-text">PYTHON</p>
             </div>
         </div>
-        <div class="card">
-            <img src="IMAGES/java2.jpg" class="card-img-top" alt="Java">
+        <div class="card" style="width: 18rem;">
+            <img src="IMAGES/java2.jpg" class="card-img-top" alt="image" height="300px">
             <div class="card-body">
                 <p class="card-text">JAVA</p>
             </div>
         </div>
         <div class="card">
-            <img src="IMAGES/c2.jpg" class="card-img-top" alt="C">
+            <img src="IMAGES/c2.jpg" class="card-img-top" alt="C" height="300px">
             <div class="card-body">
                 <p class="card-text">C</p>
             </div>
         </div>
     </div>
 
+    <h2>COMPANIES</h2>
+    <div>
+        <marquee behavior="scroll" direction="left"><img src="IMAGES/wipro2.png" alt="" height="200px"
+                width="200px"><img src="IMAGES/tcs.png" alt="" height="200px" width="200px"><img src="IMAGES/bosch.png"
+                alt="" height="200px" width="200px"><img src="IMAGES/tata.png" alt="" height="200px" width="200px"><img
+                src="IMAGES/deloitte.png" alt="" height="200px" width="200px"><img src="IMAGES/micro.png" alt=""
+                height="200px" width="200px"><img src="IMAGES/amazon.png" alt="" height="200px" width="200px"></marquee>
+    </div>
+
     <!-- About Us -->
     <div class="aboutuss">
         <h2>ABOUT US</h2>
         <div class="about">
-            <img class="imageabout" src="IMAGES/aboutus.jpg" alt="About Us">
-            <div class="vision">
-                <h3>Vision</h3>
-                <p>"To revolutionize learning by making high-quality, personalized, and accessible education available
-                    to every learner, anytime, anywhere — using the power of technology to inspire curiosity,
-                    creativity, and lifelong growth."</p>
+            <div>
+                <img class="imageabout" src="IMAGES/aboutus.jpg" alt="About Us">
             </div>
-            <div class="mission">
-                <h3>Mission</h3>
-                <p>"Our mission is to harness technology to create engaging, inclusive, and effective learning
-                    experiences that empower learners of all ages to reach their full potential — anytime, anywhere."
-                </p>
+            <div>
+                <div class="vision">
+                    <h3>Vision</h3>
+                    <p>"To revolutionize learning by making high-quality, personalized, and accessible education
+                        available
+                        to every learner, anytime, anywhere — using the power of technology to inspire curiosity,
+                        creativity, and lifelong growth."</p>
+                </div>
+                <div class="mission">
+                    <h3>Mission</h3>
+                    <p>"Our mission is to harness technology to create engaging, inclusive, and effective learning
+                        experiences that empower learners of all ages to reach their full potential — anytime,
+                        anywhere."
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -301,7 +358,7 @@
             <button class="btns" type="submit">Send</button>
         </form>
         <div>
-            <img class="contactusimage" src="IMAGES/contact.jpg" alt="Contact Us">
+            <img class="contactusimage" src="IMAGES/contact.jpeg" alt="Contact Us">
         </div>
     </div>
 
